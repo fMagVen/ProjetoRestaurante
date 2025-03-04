@@ -1,0 +1,156 @@
+* {
+    font-family: 'Trebuchet MS';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+}
+
+
+.barra-topo {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px 0 10px;
+}
+
+.link-barra {
+    color: white;
+    text-decoration: none;
+}
+
+.principal {
+    font-size: 30px;
+}
+
+.container {
+    padding: 0 10px 0 10px;
+    height: 100%;
+}
+
+.card {
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-corpo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textos-card {}
+
+.titulo-card {}
+
+.descricao-card {}
+
+.selecao-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.grande-botao-adicao {
+    background: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.botao-selecao {
+    background: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantidade {
+    margin: 0 5px 0 5px;
+    vertical-align: top;
+    line-height: 95%;
+}
+
+.off-canvas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 1px;
+    max-height: 35dvh;
+    overflow: auto;
+    background-color: red;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-pedido {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid black;
+}
+
+.botoes-status {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.selecao-status {
+    width: 30%;
+    height: 4vh;
+    border: none;
+    border-radius: 20%;
+}
+
+.login-colaborador {
+    display: flex;
+    flex-direction: column;
+    padding: 30% 20% 0 20%;
+    gap: 5px;
+}
+
+.container-botao {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.fazer-login {
+    width: 60%;
+    border: none;
+    border-radius: 10%;
+    height: 30px;
+    background-color: red;
+}
+
+.dados-cliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.parsley-required {}

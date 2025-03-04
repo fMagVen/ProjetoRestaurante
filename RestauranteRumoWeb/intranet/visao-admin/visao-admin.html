@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intranet Rumo</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../comum/style.css">
+</head>
+
+<body>
+    <nav class="barra-topo">
+        <a class="link-barra principal" href="../../cardapio/index.html">Restaurante Rumo</a>
+        <a class="link-barra"
+            onclick="localStorage.clear(); window.location.href = '../intranet-login.html'">Deslogar</a>
+    </nav>
+    <div class="container" id="corpo-pedidos">
+        <form class="login-colaborador" id="form-cadastro-colaborador" action="" data-parsley-validate="">
+            <h4>Cadastrar novo colaborador</h3>
+                <label for="nome-colaborador-cadastro">Nome</label>
+                <input id="nome-colaborador-cadastro" type="text" maxlength="45" required data-parsley-length="[2,45]"
+                    data-parsley-length-message="Nome entre 2 e 45 letras" />
+                <label for="setor-colaborador-cadastro">Setor</label>
+                <select id="setor-colaborador-cadastro">
+                    <option value="">Carregando...</option>
+                </select>
+                <label for="senha-colaborador-cadastro">Senha</label>
+                <input id="senha-colaborador-cadastro" type="password" minlength="1" maxlength="100" required
+                    data-parsley-length="[1,100]" data-parsley-length-message="Senha entre 1 e 100 caracteres" />
+                <div class="container-botao">
+                    <input class="fazer-login" id="cadastrar-colaborador" type="submit" value="Cadastrar" />
+                </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../comum/parsley-i18n.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../comum/uteis.js"></script>
+    <script src="../../comum/pedidos-script.js"></script>
+    <script src="./visao-admin.js"></script>
+</body>
+
+</html>

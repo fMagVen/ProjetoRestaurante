@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurante Rumo</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../comum/style.css">
+</head>
+
+<body>
+    <nav class="barra-topo">
+        <a class="link-barra principal" href="#">Restaurante Rumo</a>
+        <a class="link-barra" href="../intranet/intranet-login.html">Intranet</a>
+    </nav>
+    <div class="container" id="corpoCardapio">
+
+    </div>
+    <div class="off-canvas">
+        <button class="toggle-pedido">acima</button>
+        <h3>Seu pedido:</h3>
+        <div class="montagem-pedido"></div>
+        <div class="total"></div>
+        <form class="dados-cliente" id="dados-cliente" data-parsley-validate="">
+            <div style="display: flex; flex-direction: column;">
+                <label for="nome">Nome</label>
+                <div style="display: flex; flex-direction: column;">
+                    <input id="nome" type="text" minlength="2" maxlength="80" required data-parsley-length="[2,80]"
+                        data-parsley-length-message="Nome entre 2 e 80 letras" />
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <label for="mesa">Mesa</label>
+                <div style="display: flex; flex-direction: column;">
+                    <input id="mesa" type="number" min="0" step="1" oninput="this.value = Math.abs(this.value)"
+                        maxlength="4" required data-parsley-length="[1,3]"
+                        data-parsley-length-message="Mesa entre 1 e 999" />
+                </div>
+            </div>
+            <input value="Fazer pedido!" type="submit" class="fazer-pedido" />
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+        integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../comum/parsley-i18n.js"></script>
+    <script src="../comum/uteis.js"></script>
+    <script src="./cardapio.js"></script>
+</body>
+
+</html>
